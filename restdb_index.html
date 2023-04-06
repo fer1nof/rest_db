@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="restdb_style.css">
+    <script src="restdb_script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Robocode Marketplace</h1>
+        <div class="cont-bask">
+            <button class="bask-btn" onclick="bask_btn()">
+                <img src="img/bask.png">
+            </button>
+            <div class="bask-prods hide" id="hide">
+                <p class="p_bask">Cart is empty</p>
+                <div class="btn_bask" onclick="buy_all()">Buy all</div>
+            </div>
+            
+        </div>
+    </header>
+    <main>
+        <div id="results"></div>
+    </main>
+    <div id="myModal" class="modal hide_modal">
+        <div class="modal-content">
+            <div id="modals_results"></div>
+            <div class="input_div">
+                <input placeholder="Full Name" id="name" type="text">
+                <input placeholder="Delivery Adress" id="adress" type="text">
+                <input placeholder="Phone Number" id="ph_number" type="text">
+                <input placeholder="Post Office Number" id="post_number" type="text">
+                <p>Total Price: <p id="total_price"></p></p>
+                <input type="button" value="Order">
+            </div>
+            
+        </div>
+    </div>
+    
+
+</body>
+</html>
