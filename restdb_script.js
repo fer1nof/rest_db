@@ -43,22 +43,8 @@ function ProductsList(){
       <button class="prods-btn" onclick="AddToBask(${p.id})">Buy</button>
     `;
     results.append(div_prods);
-  })
-  // for (let i = 0; i < productArray.length; i++){
-  //     let offers = `
-  //     <div class="cont_item" id="cont_item">
-  //     <b id="prod_name${i}" data="${i}" class="name">${product[i].name}</b>
-  //     <img id="prod_img${i}" class="prods-img" src="${product[i].photo_url}">
-  //     <p>
-  //     <b>Price: <b id="prod_price${i}">${product[i].price}</b>$</b> <br>
-  //     <b id="prod_decrip${i}">Description: </b>${product[i].description}</p>
-  //     <a href="#">Seller profile</a>
-  //     <button id="prod_btn${i}" class="prods-btn" onclick="AddToBask(this)">Buy</button>
-  //     </div>
-  //     `;
-  //     results.innerHTML += offers;
-  // }
-}
+  });
+};
 
 function bask_btn() {
   hide_list.classList.toggle('hide');
@@ -83,29 +69,6 @@ function AddToBask(id) {
     setTimeout(function(){
         document.getElementById('bask-btn').classList.remove('active');
     },500);
-  /*
-  console.log(a);
-  let elemID = parse(a.id);
-  console.log(elemID);
-  let nameID = document.getElementById(`prod_name${elemID}`).textContent;
-  let priceID = Number(document.getElementById(`prod_price${elemID}`).textContent);
-  let imgID = document.getElementById(`prod_img${elemID}`).src;
-  imgSrc = `<img class="bask-img" src="${imgID}">`
- 
-  bask_total += priceID;
-
-  let orderArray = {
-    name: nameID,
-    price: priceID,
-    img: imgID
-  };
-  
-  db_arrray.push(orderArray);
-
-  drawProdInBasket();
-
-  console.log(db_arrray);
-  */
 }
   function drawProdInBasket() {
     if(bask_array.length === 0) return hide_list.innerHTML = 'Cart is empty';
@@ -122,19 +85,6 @@ function AddToBask(id) {
       <p>Total price: ${bask_total}$</p>
       <div class="btn_bask" id="btn_bask" onclick="buy_all()">Buy all</div>
     `;
-  /*
-   if(db_arrray.length === 0) return 
-     bask_prods.innerHTML = '';
-     bask_prods.innerHTML += `<div class="bask_push_prods">${imgSrc} ${nameID}| ${priceID}$</div>
-       <hr>
-    `;
-     hide_list.innerHTML += `<div class="btn_bask" id="btn_bask" onclick="buy_all()">Buy all</div>`;
-     t = false;else{
-     bask_prods.innerHTML += `<div class="bask_push_prods">${imgSrc} ${nameID}| ${priceID}$</div>
-       <hr>
-     `;
-   }
-  */
   }
   // function cancel(){
   //   document.getElementById('btn_bask_cancelation').addEventListener('click', function(){
