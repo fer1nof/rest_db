@@ -9,15 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="main_header">
         <h1>Robocode Marketplace</h1>
         <div class="cont-bask">
-            <button class="bask-btn" onclick="bask_btn()">
+            <button onclick="bask_btn()" id="bask-btn">
                 <img src="img/bask.png">
             </button>
-            <div class="bask-prods hide" id="hide">
-                <p class="p_bask">Cart is empty</p>
-                <div class="btn_bask" onclick="buy_all()">Buy all</div>
+            <div class="bask_prods hide" id="bask_prods">
+                Cart is empty
             </div>
             
         </div>
@@ -27,15 +26,22 @@
     </main>
     <div id="myModal" class="modal hide_modal">
         <div class="modal-content">
-            <div id="modals_results"></div>
-            <div class="input_div">
-                <input placeholder="Full Name" id="name" type="text">
-                <input placeholder="Delivery Adress" id="adress" type="text">
-                <input placeholder="Phone Number" id="ph_number" type="text">
-                <input placeholder="Post Office Number" id="post_number" type="text">
-                <p>Total Price: <p id="total_price"></p></p>
-                <input type="button" value="Order">
+            <header class="modal_header">
+                <div class="modal_main_cont">
+                    <div class="modal_cross" onclick="closeModalWindow()"></div>
+                </div>
+            </header>
+            <div id="cont_modal_results">
+
             </div>
+            <form class="input_div" id="input_form">
+                <input placeholder="Full Name" id="name" type="text" name="input">
+                <input placeholder="Delivery Adress" id="adress" type="text" name="input">
+                <input placeholder="Phone Number" id="ph_number" type="text" name="input">
+                <input placeholder="Post Office Number" id="post_number" type="text" name="input">
+                <b>Total price: <b id="total_price"></b></b>
+                <input type="submit" value="Order" id="submit_form" name="input">
+            </form>
             
         </div>
     </div>
